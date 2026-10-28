@@ -13,10 +13,9 @@ privacy policy URL and support URL (hosted on GitHub Pages from `docs/`):
 - https://walterholiday.github.io/dobry-peptide-calculator/privacy.html
 - https://walterholiday.github.io/dobry-peptide-calculator/support.html
 
-Remaining, account holder only: press **Publish** on the App Privacy page
-(and confirm), then **Add for Review** on the version 1.0 page (and confirm).
-Status in the sidebar changes from "Prepare for Submission" to
-"Waiting for Review" once that is done.
+Privacy label published and version 1.0 (build 1) submitted to App Review
+on 2026-10-28 (status: Waiting for Review). Next: watch App Store Connect
+for the review result; on approval the version releases automatically.
 
 
 Everything in the "Done in the repo" section is already in place. The rest
