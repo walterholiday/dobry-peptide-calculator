@@ -38,9 +38,11 @@ has to be done by the account holder in Xcode and App Store Connect.
 3. App Privacy questionnaire: answer "No, we do not collect data".
 4. Age rating: answer the medical/treatment questions honestly; expect a
    17+ rating because the app concerns substance dosing.
-5. Screenshots: 6.9" iPhone (1320x2868) and 13" iPad (2064x2752) are required
-   because the app targets iPhone and iPad. Take them from the simulator with
-   the disclaimer accepted and a worked example filled in.
+5. Screenshots: App Store Connect's current primary iPhone slot is "iPhone with
+   Dynamic Island (medium display)" at 1206x2622, and iPad 13" at 2064x2752.
+   Ready-made files are in `store-assets/screenshots/` (`iphone-63-*.png` for
+   the iPhone slot, `ipad-13-*.png` for iPad). The 1320x2868 `iphone-69-*.png`
+   originals are kept for the 6.9" slot in Media Manager if wanted.
 6. Select the uploaded build, add review notes, submit.
 
 ## Review risk to be aware of
