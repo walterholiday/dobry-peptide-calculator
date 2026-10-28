@@ -216,6 +216,9 @@ export default function PeptideCalc() {
         @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
       `}</style>
 
+      {/* Opaque backdrop under the iOS status bar so scrolled content never collides with it */}
+      <div style={{ position: "fixed", top: 0, left: 0, right: 0, height: "env(safe-area-inset-top)", background: C.surface, zIndex: 10, pointerEvents: "none" }} />
+
       {/* ── DISCLAIMER GATE ── */}
       {!accepted && <DisclaimerGate onAccept={() => setAccepted(true)} />}
 
