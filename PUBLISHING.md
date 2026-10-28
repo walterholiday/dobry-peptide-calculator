@@ -1,5 +1,24 @@
 # App Store publishing checklist
 
+## Status as of 2026-10-28
+
+App Store Connect record: **PepCalc Reconstitution**, Apple ID 6828017839,
+bundle id com.pepcalc.reconstitution, team ANYZDAU69M.
+
+Done: build 1.0 (1) uploaded and attached, listing text, screenshots,
+category Utilities, subtitle, pricing Free in 175 countries, availability,
+content rights, age rating (4+), privacy answer "Data Not Collected",
+privacy policy URL and support URL (hosted on GitHub Pages from `docs/`):
+
+- https://walterholiday.github.io/dobry-peptide-calculator/privacy.html
+- https://walterholiday.github.io/dobry-peptide-calculator/support.html
+
+Remaining, account holder only: press **Publish** on the App Privacy page
+(and confirm), then **Add for Review** on the version 1.0 page (and confirm).
+Status in the sidebar changes from "Prepare for Submission" to
+"Waiting for Review" once that is done.
+
+
 Everything in the "Done in the repo" section is already in place. The rest
 has to be done by the account holder in Xcode and App Store Connect.
 
