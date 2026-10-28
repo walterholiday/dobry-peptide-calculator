@@ -14,5 +14,5 @@ app.get('/{*splat}', (req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Dobry Peptide Calculator running on port ${PORT}`);
+  console.log(`Peptide Calculator running on port ${PORT}`);
 });

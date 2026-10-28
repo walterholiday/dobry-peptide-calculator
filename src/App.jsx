@@ -28,7 +28,7 @@ const C = {
   white: "#FFFFFF",
 };
 
-const F = `'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif`;
+const F = `'DM Sans Variable','DM Sans',-apple-system,BlinkMacSystemFont,sans-serif`;
 const M = `'JetBrains Mono','SF Mono','Fira Code',monospace`;
 
 /* ─────────── Syringe ─────────── */
@@ -114,7 +114,7 @@ function DisclaimerGate({ onAccept }) {
       <div style={{ textAlign: "center", marginBottom: 28 }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 10, background: C.greenLight, padding: "6px 16px", borderRadius: 100, border: `1px solid ${C.green}20` }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={C.green} strokeWidth="2" strokeLinecap="round"><path d="M6 3v18M18 3v18M6 12h12M9 3h6M9 21h6" /></svg>
-          <span style={{ fontSize: 10, fontWeight: 700, color: C.green, letterSpacing: ".15em", textTransform: "uppercase" }}>Dobry Peptides</span>
+          <span style={{ fontSize: 10, fontWeight: 700, color: C.green, letterSpacing: ".15em", textTransform: "uppercase" }}>Peptide Calculator</span>
         </div>
         <h1 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 4px", letterSpacing: "-.02em", color: C.text }}>Reconstitution Calculator</h1>
         <p style={{ fontSize: 13, color: C.muted, margin: 0 }}>Please review the disclaimer below before continuing</p>
@@ -140,10 +140,10 @@ function DisclaimerGate({ onAccept }) {
             This calculator is provided <strong style={{ color: C.text }}>for entertainment and educational purposes only</strong> and should not be considered medical, veterinary, or professional advice of any kind. Consult a licensed healthcare professional before making any decisions related to health or research protocols.
           </p>
           <p style={{ margin: "0 0 10px" }}>
-            All products sold by Dobry Peptides are intended <strong style={{ color: C.text }}>strictly for laboratory research and in-vitro use only</strong>. They are not approved for human or animal consumption by the FDA or any regulatory body.
+            Research peptides are intended <strong style={{ color: C.text }}>strictly for laboratory research and in-vitro use only</strong>. They are not approved for human or animal consumption by the FDA or any regulatory body.
           </p>
           <p style={{ margin: 0 }}>
-            By using this calculator, you acknowledge that Dobry Peptides assumes no responsibility or liability for how this information is used. Results are mathematical estimates and should be independently verified.
+            By using this calculator, you acknowledge that no responsibility or liability is assumed for how this information is used. Results are mathematical estimates and should be independently verified.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ function DisclaimerGate({ onAccept }) {
           <input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)}
             style={{ marginTop: 2, accentColor: C.green, width: 16, height: 16, cursor: "pointer" }} />
           <span style={{ fontSize: 12, lineHeight: 1.6, color: C.text }}>
-            I understand this calculator is <strong>for entertainment purposes only</strong>, is not medical advice, and that all Dobry Peptides products are for research use only and not for human consumption.
+            I understand this calculator is <strong>for entertainment purposes only</strong>, is not medical advice, and that all research peptides are for research use only and not for human consumption.
           </span>
         </label>
 
@@ -172,16 +172,14 @@ function DisclaimerGate({ onAccept }) {
 
       {/* Footer */}
       <div style={{ textAlign: "center", marginTop: 20, fontSize: 9.5, color: C.dim, lineHeight: 1.6 }}>
-        <span style={{ color: C.green, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase" }}>Dobry Peptides</span>
-        <span style={{ margin: "0 5px", opacity: .3 }}>·</span>
-        Pure, Potent & Precise
+        <span style={{ color: C.green, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase" }}>Peptide Calculator</span>
       </div>
     </div>
   );
 }
 
 /* ═══════════════════ MAIN ═══════════════════ */
-export default function DobryCalc() {
+export default function PeptideCalc() {
   const [accepted, setAccepted] = useState(false);
   const [vialMg, setVialMg] = useState("");
   const [doseMg, setDoseMg] = useState("");
@@ -207,10 +205,10 @@ export default function DobryCalc() {
   const ub = { position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)", fontSize: 10.5, color: C.muted, fontFamily: M, fontWeight: 600, background: C.surface, padding: "2px 6px", borderRadius: 4 };
 
   return (
-    <div style={{ minHeight: "100vh", background: C.surface, fontFamily: F, color: C.text, padding: "24px 12px", display: "flex", justifyContent: "center" }}>
-      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <div style={{ minHeight: "100vh", background: C.surface, fontFamily: F, color: C.text, padding: "calc(24px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left))", display: "flex", justifyContent: "center" }}>
       <style>{`
-        *,*::before,*::after{box-sizing:border-box}
+        *,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+        button,label{-webkit-user-select:none;user-select:none}
         input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
         input[type=number]{-moz-appearance:textfield}
         input::placeholder{color:${C.dim}}
@@ -229,7 +227,7 @@ export default function DobryCalc() {
           <div style={{ textAlign: "center", marginBottom: 24 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 10, background: C.greenLight, padding: "6px 16px", borderRadius: 100, border: `1px solid ${C.green}20` }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={C.green} strokeWidth="2" strokeLinecap="round"><path d="M6 3v18M18 3v18M6 12h12M9 3h6M9 21h6" /></svg>
-              <span style={{ fontSize: 10, fontWeight: 700, color: C.green, letterSpacing: ".15em", textTransform: "uppercase" }}>Dobry Peptides</span>
+              <span style={{ fontSize: 10, fontWeight: 700, color: C.green, letterSpacing: ".15em", textTransform: "uppercase" }}>Peptide Calculator</span>
             </div>
             <h1 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 4px", letterSpacing: "-.02em", color: C.text }}>Reconstitution Calculator</h1>
             <p style={{ fontSize: 13, color: C.muted, margin: 0 }}>Calculate reconstitution volume, concentration & syringe units</p>
@@ -255,7 +253,7 @@ export default function DobryCalc() {
             <div style={{ marginBottom: 16 }}>
               <label style={lbl}>MG In Vial</label>
               <div style={{ position: "relative" }}>
-                <input type="number" value={vialMg} onChange={e => setVialMg(e.target.value)}
+                <input type="number" inputMode="decimal" value={vialMg} onChange={e => setVialMg(e.target.value)}
                   placeholder="10" min="0" step="any" style={inp} />
                 <span style={ub}>mg</span>
               </div>
@@ -267,7 +265,7 @@ export default function DobryCalc() {
             <div style={{ marginBottom: 16 }}>
               <label style={lbl}>Desired Research Dose</label>
               <div style={{ position: "relative" }}>
-                <input type="number" value={doseMg} onChange={e => setDoseMg(e.target.value)}
+                <input type="number" inputMode="decimal" value={doseMg} onChange={e => setDoseMg(e.target.value)}
                   placeholder="0.25" min="0" step="any" style={inp} />
                 <span style={ub}>mg</span>
               </div>
@@ -279,7 +277,7 @@ export default function DobryCalc() {
             <div>
               <label style={lbl}>Bacteriostatic Water</label>
               <div style={{ position: "relative" }}>
-                <input type="number" value={waterMl} onChange={e => setWaterMl(e.target.value)}
+                <input type="number" inputMode="decimal" value={waterMl} onChange={e => setWaterMl(e.target.value)}
                   placeholder="2" min="0" step="any" style={inp} />
                 <span style={ub}>mL</span>
               </div>
@@ -351,10 +349,6 @@ export default function DobryCalc() {
 
           {/* Footer disclaimer */}
           <div style={{ textAlign: "center", marginTop: 24, paddingTop: 14, borderTop: `1px solid ${C.border}`, fontSize: 9.5, color: C.muted, lineHeight: 1.8, letterSpacing: ".01em", maxWidth: 500, marginInline: "auto" }}>
-            <span style={{ color: C.green, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase" }}>Dobry Peptides</span>
-            <span style={{ margin: "0 5px", opacity: .3 }}>·</span>
-            <span style={{ color: C.dim }}>Pure, Potent & Precise</span>
-            <br />
             This calculator is for entertainment and educational purposes only and should not be considered medical advice. All products are intended strictly for laboratory research and in-vitro use. Not for human or animal consumption. Please consult a licensed healthcare professional.
           </div>
         </div>
